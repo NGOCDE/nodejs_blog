@@ -22,14 +22,25 @@
   "bugs": {
     "url": "https://github.com/NGOCDE/nodejs_blog/issues"
   },
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+  },
+  "husky": {
+    "hook": {
+      "pre-commit":"lint-staged"
+    }
+  },
   "homepage": "https://github.com/NGOCDE/nodejs_blog#readme",
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^7.1.0"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1",
+    "prettier": "^3.0.0",
     "sass": "^1.64.1"
   }
 }
