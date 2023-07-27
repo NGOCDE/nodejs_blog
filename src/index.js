@@ -42,8 +42,8 @@ app.get('/search', (req, res) => {
 });
 
         app.post('/search', (req, res) => {
-        console.log(req.body);
-        res.send('search');
+          console.log(req.body);
+          res.send('search');
 });
 
 app.listen(port, () => {
